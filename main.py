@@ -11,11 +11,17 @@ def ins_sort(arr: list) -> None:
             previousIndex -= 1
         arr[previousIndex + 1] = currentValue # Insert the currentValue in the correct position
 
-# Source array
-arr = [4, 5, 1, 2, 3]
+# Generate a random list of 20 numbers
+source=[]
+n=20
+for i in range(n):
+    source.append(random.randint(1,1000))
 
-# Sort the array
-ins_sort(arr)
+# Print the unsorted list
+print("Original source: ", source)
 
-# Print the sorted array
-print(arr)
+# Sort the list
+ins_sort(source)
+
+# Print the sorted list
+print("Sorted monotonic decreasing source: ", source)
